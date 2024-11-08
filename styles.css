@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #300532;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #7a3f8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#player-container {
+    width: 640px;
+    height: 360px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+#history-container {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 300px;
+    background-color: #40094c;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#history-container h2 {
+    margin-bottom: 15px;
+}
+
+#history {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#history li {
+    background-color: #5e1b66;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#carouselContainer {
+    perspective: 1000px;
+    transform: translateX(-100px);
+    margin-left: -50px;
+}
+
+.carousel {
+    width: 240px; 
+    height: 160px; 
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+}
+
+.carousel .slide:nth-child(1) { transform: rotateY(0deg) translateZ(280px); } 
+.carousel .slide:nth-child(2) { transform: rotateY(72deg) translateZ(280px); } 
+.carousel .slide:nth-child(3) { transform: rotateY(144deg) translateZ(280px); } 
+.carousel .slide:nth-child(4) { transform: rotateY(216deg) translateZ(280px); } 
+.carousel .slide:nth-child(5) { transform: rotateY(288deg) translateZ(280px); } 
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+  

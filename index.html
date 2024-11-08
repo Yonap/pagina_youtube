@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Videos de YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Reproductor de Videos de YouTube</h1>
+
+    <input type="text" id="video-url" placeholder="Introduce el enlace de YouTube">
+    <button onclick="addVideo()">Agregar Video</button>
+
+    <div id="player-container">
+        <div id="player"></div>
+    </div>
+
+    <div class="container">
+        <div id="history-container">
+            <h2>Videos y Descargas</h2>
+            <ul id="history"></ul>
+        </div>
+
+        <div id="carousel-container">
+            <h2>Historial</h2>
+            <div id="carouselContainer">
+                <div class="carousel">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
